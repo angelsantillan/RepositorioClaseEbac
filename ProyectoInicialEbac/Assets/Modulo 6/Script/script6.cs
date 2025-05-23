@@ -73,7 +73,8 @@ public class script6 : MonoBehaviour
         boxCollider.center = new Vector3(0.5f, 0.5f, 0.5f);
         objToSpawn.AddComponent<MeshRenderer>();
         var meshRendererMaterial = objToSpawn.GetComponent<MeshRenderer>().material;
-        meshRendererMaterial.color = Color.white;
-        objToSpawn.transform.position = Vector3.one;
+        Color c = new Color(Random.value, Random.value, Random.value);
+        meshRendererMaterial.color = c;
+        objToSpawn.transform.position = new Vector3(Random.value * 6, Random.value * 6, Random.value * 6);
     }
 }
